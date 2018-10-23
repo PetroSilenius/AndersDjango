@@ -6,6 +6,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
+
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -20,12 +21,17 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup/signup.html', {'form': form})
 
+def temp(request):
+    return redirect('/')
+
 def index(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=55f0bce1ae50d640b124d24c67f01d62'
+
 
     if request.method == 'POST':
         form = CityForm(request.POST)
         form.save()
+
 
     form = CityForm()
 
