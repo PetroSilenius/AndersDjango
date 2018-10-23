@@ -30,7 +30,7 @@
                                 {{ form.name }}
                             </div>
                             <div class="control">
-                                <button type ="submit" class="button is-info">
+                                <button type ="submit" name="add city" class="button is-info">
                                     Add City
                                 </button>
                             </div>
@@ -58,8 +58,8 @@
                                         <span class="title">{{ city_weather.city }}</span>
                                         <br>
                                         <span class="subtitle">{{ city_weather.temperature }}</span>
-                                        <br> {{ city_weather.description }}
-                                    </p>
+                                        <br>
+                                        {{ city_weather.description }}
                                 </div>
                             </div>
                         </article>
@@ -70,6 +70,12 @@
         </div>
     </section>
     <footer class="footer">
+        <div align="center">
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" name="delete city" class="button is-danger">Delete all</button>
+            </form>
+        </div>
     </footer>
 </body>
 
