@@ -1,7 +1,6 @@
-# AndersDjango
-Digit workshop
+# Django weather app
 
-A simple weatherapp made in Anders Innovations Django workshop
+A simple weatherapp made in Anders Innovations & Digit Django-workshop
 
 
 SETUP
